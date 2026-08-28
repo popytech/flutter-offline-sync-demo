@@ -3,11 +3,11 @@ import 'package:flutter_offline_sync_demo/src/models/sync_models.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
-  const record = AppRecord(
+  final record = AppRecord(
     id: 'record-1',
     title: 'Offline record',
     notes: 'Stored locally first',
-    updatedAt: null,
+    updatedAt: DateTime(2026),
     syncState: SyncState.pending,
   );
 
