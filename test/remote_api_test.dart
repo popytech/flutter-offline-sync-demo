@@ -26,8 +26,8 @@ void main() {
     await api.apply(operation('same-key'), record: record);
     await api.apply(operation('same-key'), record: record);
 
-    expect(
-      () => api.apply(operation('new-key'), record: record),
+    await expectLater(
+      api.apply(operation('new-key'), record: record),
       throwsA(isA<RemoteSyncException>()),
     );
   });
